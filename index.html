@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="curds">
+        <!-- head -->
+        <div class="head">
+            <!-- h1 -->
+            <h1>curds</h1>
+            <!-- p -->
+            <p>creat updata read delete search</p>
+        </div>
+
+        <!-- input -->
+        <div class="input">
+            <!-- title -->
+            <input type="text" id="title" placeholder="title">
+            <!-- div -->
+            <div class="other">
+                <!-- price -->
+                <input  onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <!-- taxses -->
+                <input  onkeyup="getTotal()" type="number" id="taxes" placeholder="taxses">
+                <!-- ads -->
+                <input  onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <!-- discount -->
+                <input  onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <!-- total -->
+                <small id="total"></small>
+            </div>
+            <!-- div -->
+
+            <!-- count -->
+            <input type="number" id="count" placeholder="count"> 
+            <!-- catogray -->
+            <input type="text" id="catogray" placeholder="catogray"> 
+            <!-- create -->
+            <button id="create">create</button>
+        </div>
+
+
+        <!-- outbut -->
+        <div class="outbut">
+            <!-- text search -->
+            <input onkeyup="searchInp(this.value)" type="text" placeholder="search" id="search">
+            
+            <!-- div = btnSearch -->
+            <div class="btnSearch">
+                <!-- btn search by title -->
+                <button onclick="ClickBtnSearch(this.id)" id="searchTitle">search Title</button>
+                <!-- btn search by catogray -->
+                <button onclick="ClickBtnSearch(this.id)" id="searchCatogray">search Catogray</button>
+            </div>
+            <!-- div = btnSearch -->
+                <button id="DelAll">Delete All</button>
+            <!-- table -->
+            <table>
+                <!-- head table -->
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>texes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>ubdata</th>
+                    <th>delete</th>
+                </tr>
+                <!-- body table -->
+                <tbody id="tbody">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>oppo</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>oppo</td>
+                        <td><button id="updata">updata</button></td>
+                        <td><button id="delete">delete</button></td>
+                    </tr> -->
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
